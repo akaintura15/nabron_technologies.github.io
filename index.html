@@ -10,74 +10,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-/* -------------------------slide show images----------------------*/
-* {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
 
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-/* ----------end of slide show images------------*/
 * {box-sizing: border-box;}
 
 body { 
@@ -108,8 +42,8 @@ body {
   color: black;
 }
 
-.header-right {
-  float: right;
+.header-left {
+  float: left;
 }
 
 @media screen and (max-width: 500px) {
@@ -136,6 +70,25 @@ h1, h2, h3, h4, h5, h6 {
 /*-------------read more button*/
 #more {display: none;}
 /*---------end----------*/
+/*side to side images*/
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*end of side to side images*/
+
 </style>
 <body>
 
@@ -155,61 +108,46 @@ h1, h2, h3, h4, h5, h6 {
 
 <!-- Header -->
 <div class="header  w3-black">
-
- <img class="responsive"  alt="Nabron technologies" src="sap.png" width="130" height="65">
-  <div class="header-right">
-    <a class="active" href="#home">Home</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+  <div class="header-left">
+    <a href="#home">Home</a>
+    <a onclick="contact()">Contact</a>
+    <a onclick="about()">About</a>
   </div>
+  <img class="responsive w3-right"  alt="Nabron technologies" src="sap.png" width="120" height="50">
 </div>
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img class="w3-image" src="logo.png" alt="company logo" width="1600">
-  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-    <h1 class="w3-xxlarge">Le Catering</h1>
+  <img class="w3-image responsive" src="logo.png" alt="company logo" width="1600">
+  <div class="w3-display-bottomleft  w3-opacity">
+    <h1 class="w3-xxlarge">Passion to Deliver</h1>
   </div>
 </div>
 <br>
+
 </header>
 <!-- Page content -->
 
 
   <!-- About Section -->
-  <div class="w3-container w3-black ">
+<div class="w3-container w3-white ">
 <h2 class="w3-allerta w3-xxlarge" style="text-align:center"><b>ABOUT US</b></h2>
-<p class="w3-large"> Nabron technologies is a young vibrant integrated business solutions consultancy, specializing in implementation and support for SAP business solutions. Our software and service solutions include ERP, ERP SAP and add-on software solutions for big, medium and small scale industries. We help your business benefit from the integrated real-time technology that our solutions provide. Backed by significant business process knowledge and systems implementation skills, we work with you to rapidly, but safely, implement any of your core system needs. Using our proven implementation methodology, we provide a safe implementation approach and provide responsive ongoing support to ensure low total cost of ownership.</p>
+<p class="w3-xlarge"> Nabron technologies is a young vibrant integrated business solutions consultancy, specializing in implementation and support for SAP business solutions. Our software and service solutions include ERP, ERP SAP and add-on software solutions for big, medium and small scale industries. We help your business benefit from the integrated real-time technology that our solutions provide. Backed by significant business process knowledge and systems implementation skills, we work with you to rapidly, but safely, implement any of your core system needs. Using our proven implementation methodology, we provide a safe implementation approach and provide responsive ongoing support to ensure low total cost of ownership.<span id="dots">...</span><span id="more"></span></p>
+<button onclick="about()" id="myBtn">Read more</button>
 </div>
+<hr>
+<br>
+<hr>
 <!---  new container end here     -->
-  <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large ">
-     <img src="services.jpg" class="w3-round w3-image w3-opacity-min" alt="intro" width="600" height="400">
-    </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">what we do</h1><br>
-      
-    </div>
+<div class="row">
+  <div class="column">
+    <img class="responsive" src="sap1.jpg" alt="sap" style="width:100%">
   </div>
- <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large ">
-     <img src="services.jpg" class="w3-round w3-image w3-opacity-min" alt="intro" width="600" height="400">
-    </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">what we do</h1><br>
-      
-    </div>
+  <div class="column">
+    <img class="responsive" src="services.jpg" alt="Forest" style="width:100%">
   </div>
-  <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large ">
-     <img src="services.jpg" class="w3-round w3-image w3-opacity-min" alt="intro" width="600" height="400">
-    </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">what we do</h1><br>
-      
-    </div>
+  <div class="column">
+    <img class="responsive" src="teamwork.jpg" alt="Mountains" style="width:100%">
   </div>
+</div>
   <br>
   <hr>
   
@@ -234,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
     
     <div class="w3-col l6 w3-padding-large">
-      <img src="services.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+      <img src="meeting1.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
     </div>
   </div>
 
@@ -269,6 +207,28 @@ h1, h2, h3, h4, h5, h6 {
   
 </footer>
    </div>   
+   <script>
+   //for read more and read less
+   function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+//function for about page
+function about(){
+  window.open("about.html","_self")
+}
+   </script>
 
 </body>
 </html>
