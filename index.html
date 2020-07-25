@@ -4,14 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-
-
+/*text over image*/
+.text-block {
+  position: absolute;
+  left: 160px;
+  bottom: 40px;
+ 
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+}
+.container1 {
+  position: relative;
+  font-family: Arial;
+}
+/*end*/
 * {box-sizing: border-box;}
 
 body { 
@@ -22,7 +37,7 @@ body {
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
-  padding: 20px 10px;
+  padding: 30px 15px;
 }
 
 .header a {
@@ -31,7 +46,7 @@ body {
   text-align: center;
   padding: 15px;
   text-decoration: none;
-  font-size: 25px; 
+  font-size: 30px; 
   line-height: 25px;
   border-radius: 4px;
 }
@@ -49,7 +64,7 @@ body {
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
-    display: block;
+    display:inline-block;
     text-align: left;
   }
   
@@ -62,22 +77,24 @@ body {
 body {font-family: "Times New Roman", Georgia, Serif;}
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display";
-  letter-spacing: 5px;
+  letter-spacing: 1px;
 }
 /*     original  */
-
 /*---------------------      responsive image -----------*/
-/*-------------read more button*/
-#more {display: none;}
-/*---------end----------*/
-/*side to side images*/
+img1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+//
 * {
   box-sizing: border-box;
 }
 
 .column {
   float: left;
-  width: 33.33%;
+  width: 33.3333333%;
   padding: 5px;
 }
 
@@ -87,7 +104,25 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   display: table;
 }
-/*end of side to side images*/
+/*-------------read more button*/
+#more {display: none;}
+/*---------end----------*/
+/*===========banner------------------------00*/
+/*text scaling*/
+h1 {
+  font-size: 2vw; /* 30px/16=1.875em */
+ }
+h2 {
+  font-size:1.9vw;
+ }
+p {
+  font-size: 1.3vw; /* 30px/16=1.875em */
+ }
+ p2{
+  font-size: 1.2vw; /* 30px/16=1.875em */
+ }
+
+
 
 </style>
 <body>
@@ -105,30 +140,26 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 </div>
 -->
-
-<!-- Header -->
-<div class="header  w3-black">
+<div class="header w3-black id="myNavbar"">
   <div class="header-left">
-    <a href="#home">Home</a>
-    <a onclick="contact()">Contact</a>
-    <a onclick="about()">About</a>
+    <a onclick="home()" class="w3-button"><i class="fa fa-home"></i> HOME</a>
+    <a onclick="contact()" class="w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i>SERVICES</a>
+    <a onclick="about()" class="w3-button">ABOUT</a>
   </div>
-  <img class="responsive w3-right"  alt="Nabron technologies" src="sap.png" width="120" height="50">
+  <img class="responsive w3-right"  alt="Nabron technologies" src="sap.png" width="150" height="60">
 </div>
-<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img class="w3-image responsive" src="logo.png" alt="company logo" width="1600">
-  <div class="w3-display-bottomleft  w3-opacity">
-    <h1 class="w3-xxlarge">Passion to Deliver</h1>
-  </div>
+<div>
+  <img class="img1" src="logo1.png" alt="company logo" width="100%">
 </div>
 <br>
-
 </header>
 <!-- Page content -->
 
 
   <!-- About Section -->
-<div class="w3-container w3-white ">
+<div class="w3-container w3-blue ">
 <h2 class="w3-allerta w3-xxlarge" style="text-align:center"><b>ABOUT US</b></h2>
 <p class="w3-xlarge"> Nabron technologies is a young vibrant integrated business solutions consultancy, specializing in implementation and support for SAP business solutions. Our software and service solutions include ERP, ERP SAP and add-on software solutions for big, medium and small scale industries. We help your business benefit from the integrated real-time technology that our solutions provide. Backed by significant business process knowledge and systems implementation skills, we work with you to rapidly, but safely, implement any of your core system needs. Using our proven implementation methodology, we provide a safe implementation approach and provide responsive ongoing support to ensure low total cost of ownership.<span id="dots">...</span><span id="more"></span></p>
 <button onclick="about()" id="myBtn">Read more</button>
@@ -137,17 +168,40 @@ h1, h2, h3, h4, h5, h6 {
 <br>
 <hr>
 <!---  new container end here     -->
-<div class="row">
+<div class="row w3-blue">
+<h1>OUR SERVICES</h1>
   <div class="column">
-    <img class="responsive" src="sap1.jpg" alt="sap" style="width:100%">
+  <div class="container1">
+   <a href="#work">
+    <img class="responsive" src="sap2.jpg" alt="sap" style="width:100%">
+    <div class="text-block">
+    <h1>SAP services</h1>
+    </a>
+  </div>
+   </div>
   </div>
   <div class="column">
+  <div class="container1">
+  <a href="#work">
     <img class="responsive" src="services.jpg" alt="Forest" style="width:100%">
+    <div class="text-block">
+    <h1>e-Invoice Solution</h1>
+    </a>
+  </div>
+  </div>
   </div>
   <div class="column">
-    <img class="responsive" src="teamwork.jpg" alt="Mountains" style="width:100%">
+    <div class="container1">
+    <a href="#work">
+    <img class="responsive" src="hana.jpg" alt="Mountains" style="width:100%">
+    <div class="text-block">
+    <h4>Introduction to SAP S4 HANA</h4>
+    </a>
+  </div>
+    </div>
   </div>
 </div>
+
   <br>
   <hr>
   
@@ -179,18 +233,11 @@ h1, h2, h3, h4, h5, h6 {
   <hr>
 
   <!-- Contact Section -->
-  <div class="w3-container w3-padding-64" id="contact">
-    <h1>Contact</h1><br>
-    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
-    <p class="w3-text-blue-grey w3-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
-    <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
-      <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
-    </form>
+  <div class="w3-container w3-blue w3-padding-50" id="contact">
+    <h1><b>Contact</b></h1><br>
+    <p>NABRON TECHNOLOGIES is a young vibrant integrated business solutions consultancy, specializing in implementation and support for SAP business solutions. Our software and service solutions include ERP, ERP SAP and add-on software solutions for big, medium and small scale industries.. Do not hesitate to contact us.</p>
+    <p class=" w3-large"><b>NABRON TECHNOLOGIES,FLAT NO- 8, B-50 3RD FLOOR PARYAVARAN COMPLEX NEW DELHI South West Delhi DL 110030 IN </b></p>
+    <p>You can also contact us by phone 9191919191 or email deepak.rawat54@gmail.com</p>
   </div>
   
 <!-- End page content -->
@@ -208,26 +255,14 @@ h1, h2, h3, h4, h5, h6 {
 </footer>
    </div>   
    <script>
-   //for read more and read less
-   function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
-    moreText.style.display = "inline";
-  }
-}
 //function for about page
 function about(){
   window.open("about.html","_self")
 }
+function contact(){
+  window.open("contact.html","_self")
+}
+
    </script>
 
 </body>
