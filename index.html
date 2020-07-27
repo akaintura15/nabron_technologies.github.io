@@ -6,15 +6,17 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 /*text over image*/
 .text-block {
   position: absolute;
-  left: 160px;
-  bottom: 40px;
- 
+  left: 80px;
+  bottom: 20px;
+ right:80px;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
@@ -37,7 +39,7 @@ body {
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
-  padding: 30px 15px;
+  padding: 7px 20px;
 }
 
 .header a {
@@ -46,7 +48,7 @@ body {
   text-align: center;
   padding: 15px;
   text-decoration: none;
-  font-size: 30px; 
+  font-size: 20px; 
   line-height: 25px;
   border-radius: 4px;
 }
@@ -110,13 +112,13 @@ img1 {
 /*===========banner------------------------00*/
 /*text scaling*/
 h1 {
-  font-size: 2vw; /* 30px/16=1.875em */
+  font-size: 2.0vw; /* 30px/16=1.875em */
  }
 h2 {
-  font-size:1.9vw;
+  font-size:1.8vw;
  }
 p {
-  font-size: 1.3vw; /* 30px/16=1.875em */
+  font-size: 1.5vw; /* 30px/16=1.875em */
  }
  p2{
   font-size: 1.2vw; /* 30px/16=1.875em */
@@ -140,6 +142,7 @@ p {
   </div>
 </div>
 -->
+<div class="w3-top">
 <div class="header w3-black id="myNavbar"">
   <div class="header-left">
     <a onclick="home()" class="w3-button"><i class="fa fa-home"></i> HOME</a>
@@ -148,20 +151,21 @@ p {
       <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i>SERVICES</a>
     <a onclick="about()" class="w3-button">ABOUT</a>
   </div>
-  <img class="responsive w3-right"  alt="Nabron technologies" src="sap.png" width="150" height="60">
+  <img class="responsive w3-right"  alt="Nabron technologies" src="sap.png" width="100" height="50">
+</div>
+<br>
+</header>
 </div>
 <div>
   <img class="img1" src="logo1.png" alt="company logo" width="100%">
 </div>
-<br>
-</header>
 <!-- Page content -->
 
 
   <!-- About Section -->
 <div class="w3-container w3-blue ">
-<h2 class="w3-allerta w3-xxlarge" style="text-align:center"><b>ABOUT US</b></h2>
-<p class="w3-xlarge"> Nabron technologies is a young vibrant integrated business solutions consultancy, specializing in implementation and support for SAP business solutions. Our software and service solutions include ERP, ERP SAP and add-on software solutions for big, medium and small scale industries. We help your business benefit from the integrated real-time technology that our solutions provide. Backed by significant business process knowledge and systems implementation skills, we work with you to rapidly, but safely, implement any of your core system needs. Using our proven implementation methodology, we provide a safe implementation approach and provide responsive ongoing support to ensure low total cost of ownership.<span id="dots">...</span><span id="more"></span></p>
+<h2 class="w3-allerta w3-xlarge" style="text-align:center"><b>ABOUT US</b></h2>
+<p> Nabron technologies is a young vibrant integrated business solutions consultancy, specializing in implementation and support for SAP business solutions. Our software and service solutions include ERP, ERP SAP and add-on software solutions for big, medium and small scale industries. We help your business benefit from the integrated real-time technology that our solutions provide. Backed by significant business process knowledge and systems implementation skills, we work with you to rapidly, but safely, implement any of your core system needs. Using our proven implementation methodology, we provide a safe implementation approach and provide responsive ongoing support to ensure low total cost of ownership.<span id="dots">...</span><span id="more"></span></p>
 <button onclick="about()" id="myBtn">Read more</button>
 </div>
 <hr>
@@ -169,7 +173,7 @@ p {
 <hr>
 <!---  new container end here     -->
 <div class="row w3-blue">
-<h1>OUR SERVICES</h1>
+<h1 class="w3-center"><b>OUR SERVICES</b></h1>
   <div class="column">
   <div class="container1">
    <a href="#work">
@@ -183,7 +187,7 @@ p {
   <div class="column">
   <div class="container1">
   <a href="#work">
-    <img class="responsive" src="services.jpg" alt="Forest" style="width:100%">
+    <img class="responsive" src="ein.jpg" alt="Forest" style="width:100%">
     <div class="text-block">
     <h1>e-Invoice Solution</h1>
     </a>
@@ -195,7 +199,7 @@ p {
     <a href="#work">
     <img class="responsive" src="hana.jpg" alt="Mountains" style="width:100%">
     <div class="text-block">
-    <h4>Introduction to SAP S4 HANA</h4>
+    <h2>Introduction to SAP S4 HANA</h2>
     </a>
   </div>
     </div>
@@ -244,12 +248,12 @@ p {
 </div>
 
   <!-- Footer -->
-  <footer class="w3-black w3-row-padding w3-padding-25 w3-center">
+  <footer class="w3-black w3-row-padding w3-padding-20 w3-center">
 <footer class="w3-container w3-black w3-center w3-margin-top">
   <p>Find us on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <a href="https://www.instagram.com/mma_dominator/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-facebook-official w3-hover-opacity w3-xlarge"></i>
+  <a href="https://www.instagram.com/mma_dominator/"><i class="fa fa-instagram w3-hover-opacity  w3-xlarge"></i></a>
+  <i class="fa fa-twitter w3-hover-opacity  w3-xlarge"></i>
   <p></p>
   
 </footer>
